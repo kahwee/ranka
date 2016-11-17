@@ -49,16 +49,33 @@ class Response {
   }
 
   sendText (text) {
-    this.send({
+    return this.send({
       text: text
     })
-    return this
   }
 
-  sendImage (image) {
-    this.send({
+  sendAttachment (attachment) {
+    return this.send({attachment})
+  }
 
-    })
+  sendAudio (url) {
+    return this.sendAttachmentWithPayload('audio', {url})
+  }
+
+  sendVideo (url) {
+    return this.sendAttachmentWithPayload('video', {url})
+  }
+
+  sendFile (url) {
+    return this.sendAttachmentWithPayload('file', {url})
+  }
+
+  sendAttachmentWithPayload (type, payload) {
+    return this.sendAttachment({type, payload})
+  }
+
+  sendImage (url) {
+    return this.sendAttachmentWithPayload('image', {url})
   }
 }
 module.exports = Response
