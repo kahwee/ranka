@@ -1,0 +1,13 @@
+node_modules
+npm-debug.log
+.idea/
+coverage/
+assets.json
+.DS_Store
+logs
+*.log
+pids
+.npm
+*.dat
+config/*
+!config/default.json
