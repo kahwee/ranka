@@ -1,10 +1,13 @@
 {
   "name": "ranka",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
-  "main": "ranka.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "6.x"
   },
   "repository": {
     "type": "git",
@@ -17,8 +20,12 @@
   },
   "homepage": "https://github.com/kahwee/ranka#readme",
   "dependencies": {
+    "bluebird": "^3.4.6",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "request": "^2.78.0"
+  },
+  "devDependencies": {
+    "standard": "^8.4.0"
   }
 }
