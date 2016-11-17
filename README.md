@@ -19,6 +19,7 @@ ranka.on('message', (req, res) => {
     .typing()
     .wait(3000)
     .sendText(`Did you say "${req.body.message.text}"?`)
+    .sendImage('http://i.giphy.com/FdQj4yMGloVMI.gif')
     .exec()
 })
 ```
