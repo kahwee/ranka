@@ -19,7 +19,7 @@ class Response {
     this.actions.push(() => {
       return new Promise((resolve, reject) => {
         this.ranka.api({
-          recipient: this.req.body.sender,
+          recipient: this.req.sender,
           sender_action: isTyping ? 'typing_on' : 'typing_off'
         }).then(resolve)
       })
@@ -31,7 +31,7 @@ class Response {
     this.actions.push(() => {
       return new Promise((resolve, reject) => {
         this.ranka.api({
-          recipient: this.req.body.sender,
+          recipient: this.req.sender,
           message: message
         }).then(resolve)
       })
@@ -44,14 +44,25 @@ class Response {
       return prev.then(curr)
     }, Promise.resolve())
       .then(function (result) {
-        console.log('RESULT is ')
+        console.log('RESULT is ', result)
       })
   }
 
-  sendText (text) {
+  /**
+   * @link https://developers.facebook.com/docs/messenger-platform/send-api-reference/quick-replies
+   * @param  {[type]} text       [description]
+   * @param  {[type]} quick_replies [description]
+   * @return {[type]}            [description]
+   */
+  sendQuickReplies (text, quick_replies) {
     return this.send({
-      text: text
+      text,
+      quick_replies: quick_replies
     })
+  }
+
+  sendText (text) {
+    return this.send({text})
   }
 
   sendAttachment (attachment) {
@@ -68,6 +79,10 @@ class Response {
 
   sendFile (url) {
     return this.sendAttachmentWithPayload('file', {url})
+  }
+
+  sendTemplate (payload) {
+    return this.sendAttachmentWithPayload('file', payload)
   }
 
   sendAttachmentWithPayload (type, payload) {
