@@ -15,7 +15,8 @@ class Request {
   isThumbsUp () {
     const images = this.getImages()
     const valid = [
-      369239343222814, // big
+      369239383222810, // big
+      369239343222814, // medium
       369239263222822 // small
     ]
     return images.some((attachment) => valid.includes(attachment.payload.sticker_id))

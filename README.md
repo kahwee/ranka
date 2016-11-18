@@ -2,6 +2,9 @@
 
 Facebook Messaging bot with greater expressivity.
 
+![alt text](https://github.com/kahwee/ranka/raw/master/demo.gif "Demo")
+
+
 ```js
 const Ranka = require('ranka')
 const ranka = new Ranka({
@@ -59,21 +62,15 @@ req.getAttachmentsByType('location')
 
 ### Response chainable methods
 
-#### sendText(text, quick_replies)
-
-For example, share you location
+#### sendText(text)
 
 ```js
 res
-  .sendQuickReplies('Please share your location:', [
-    {
-      content_type: 'location'
-    }
-  ])
+  .sendText('Hello!')
   .exec()
 ```
 
-#### sendQuickReplies (text, quick_replies)
+#### sendQuickReplies(text, quick_replies)
 
 For example, share you location
 
