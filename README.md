@@ -1,8 +1,12 @@
 # ranka
 
-Facebook Messaging bot with greater expressivity. It is intended to be used in conjunction with Express.
+Facebook Messaging bot with greater expressivity to be used in conjunction with Express.
 
 ![Demo](https://github.com/kahwee/ranka/raw/master/demo.gif "Demo")
+
+* [Setting up](#setting-up)
+* [Request Object](#request-object)
+* [Response Object](#response-object)
 
 ## Setting up
 
@@ -45,7 +49,7 @@ app.listen(3000, function () {
 })
 ```
 
-## Request
+## Request Object
 
 ### Request Properties
 
@@ -115,7 +119,7 @@ If no attachments of type is found, return an empty array.
 req.getAttachmentsByType('location')
 ```
 
-## Response
+## Response Object
 
 ### Response chainable methods
 
