@@ -15,16 +15,20 @@ class Response {
     return this
   }
 
-  typing (isTyping = true) {
+  senderAction (sender_action) {
     this.actions.push(() => {
       return new Promise((resolve, reject) => {
         this.ranka.api({
-          recipient: this.req.sender,
-          sender_action: isTyping ? 'typing_on' : 'typing_off'
+          sender_action,
+          recipient: this.req.sender
         }).then(resolve)
       })
     })
     return this
+  }
+
+  typing (isTyping = true) {
+    return this.senderAction(isTyping ? 'typing_on' : 'typing_off')
   }
 
   send (message) {

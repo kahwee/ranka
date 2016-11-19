@@ -125,7 +125,31 @@ req.getAttachmentsByType('location')
 
 The methods are chainable, you can use multiple methods and run `.exec()` at the end.
 
-#### send (message)
+#### senderAction(value)
+
+Set typing indicators or send read receipts using the Send API, to let users know you are processing their request.
+
+```js
+res
+  .senderAction('mark_seen')
+  .exec()
+```
+
+#### typing(isTyping)
+
+`isTyping` is defaulted to `true`.
+
+Example:
+
+```js
+res
+  .typing()
+  .wait(1000)
+  .sendText('Done!')
+  .exec()
+```
+
+#### send(message)
 
 This is equivalent to sending this payload to Facebook Messenger API where `message` is the passed in as an object.
 
@@ -185,3 +209,41 @@ res
   .exec()
 ```
 
+#### sendAudio(url)
+
+You can share a sound URL using the Send API.
+
+See more in [Facebook Messenger documentation](https://developers.facebook.com/docs/messenger-platform/send-api-reference/audio-attachment).
+
+#### sendVideo(url)
+
+You can share a video URL using the Send API.
+
+See more in [Facebook Messenger documentation](https://developers.facebook.com/docs/messenger-platform/send-api-reference/video-attachment).
+
+#### sendTemplate(payload)
+
+You can send a message template and provide a `payload` object:
+
+```
+req
+  .sendTemplate({
+    "template_type":"button",
+    "text":"What do you want to do next?",
+    "buttons":[
+      {
+        "type":"web_url",
+        "url":"https://petersapparel.parseapp.com",
+        "title":"Show Website"
+      },
+      {
+        "type":"postback",
+        "title":"Start Chatting",
+        "payload":"USER_DEFINED_PAYLOAD"
+      }
+    ]
+  })
+  .exec()
+```
+
+Using the above, you can send [Button Template](https://developers.facebook.com/docs/messenger-platform/send-api-reference/button-template), [Generic Template](https://developers.facebook.com/docs/messenger-platform/send-api-reference/generic-template), [List Template](https://developers.facebook.com/docs/messenger-platform/send-api-reference/list-template), [Reciept Template](https://developers.facebook.com/docs/messenger-platform/send-api-reference/receipt-template), [Airline Boarding Pass Template](https://developers.facebook.com/docs/messenger-platform/send-api-reference/airline-boardingpass-template) and more.
