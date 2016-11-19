@@ -153,7 +153,7 @@ res
 
 This is equivalent to sending this payload to Facebook Messenger API where `message` is the passed in as an object.
 
-```
+```json
 {
   "recipient": {
     "id": "AUTO_FILLED_USER_ID"
@@ -172,7 +172,7 @@ res
 
 Correspondingly, `ranka` generates the data to send back to Facebook:
 
-```
+```json
 {
   "recipient": {
     "id": "AUTO_FILLED_USER_ID"
@@ -247,3 +247,7 @@ req
 ```
 
 Using the above, you can send [Button Template](https://developers.facebook.com/docs/messenger-platform/send-api-reference/button-template), [Generic Template](https://developers.facebook.com/docs/messenger-platform/send-api-reference/generic-template), [List Template](https://developers.facebook.com/docs/messenger-platform/send-api-reference/list-template), [Reciept Template](https://developers.facebook.com/docs/messenger-platform/send-api-reference/receipt-template), [Airline Boarding Pass Template](https://developers.facebook.com/docs/messenger-platform/send-api-reference/airline-boardingpass-template) and more.
+
+## License
+
+Apache 2.0 License
