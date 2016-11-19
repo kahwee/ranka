@@ -55,10 +55,7 @@ class Response {
    * @return {[type]}            [description]
    */
   sendQuickReplies (text, quick_replies) {
-    return this.send({
-      text,
-      quick_replies: quick_replies
-    })
+    return this.send({text, quick_replies})
   }
 
   sendText (text) {
@@ -82,7 +79,7 @@ class Response {
   }
 
   sendTemplate (payload) {
-    return this.sendAttachmentWithPayload('file', payload)
+    return this.sendAttachmentWithPayload('template', payload)
   }
 
   sendAttachmentWithPayload (type, payload) {

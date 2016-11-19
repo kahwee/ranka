@@ -123,7 +123,47 @@ req.getAttachmentsByType('location')
 
 ### Response chainable methods
 
+The methods are chainable, you can use multiple methods and run `.exec()` at the end.
+
+#### send (message)
+
+This is equivalent to sending this payload to Facebook Messenger API where `message` is the passed in as an object.
+
+```
+{
+  "recipient": {
+    "id": "AUTO_FILLED_USER_ID"
+  },
+  "message": message
+}
+```
+
+In this case, we can send a basic text:
+
+```js
+res
+  .send({ text: 'Hello there!' })
+  .exec()
+```
+
+Correspondingly, `ranka` generates the data to send back to Facebook:
+
+```
+{
+  "recipient": {
+    "id": "AUTO_FILLED_USER_ID"
+  },
+  "message": { 
+    "text": "Hello there!" 
+  }
+}
+```
+
+The remaining commands are convenient helpers that wraps the `send()` method.
+
 #### sendText(text)
+
+Sends a text as a reply to the sender.
 
 ```js
 res
@@ -133,7 +173,7 @@ res
 
 #### sendQuickReplies(text, quick_replies)
 
-For example, share you location
+You can send some quick replies:
 
 ```js
 res
@@ -145,13 +185,3 @@ res
   .exec()
 ```
 
-
-#### send (message)
-
-For example, share you location
-
-```js
-res
-  .send({ text: 'Hello there!' })
-  .exec()
-```
