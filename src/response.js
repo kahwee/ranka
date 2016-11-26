@@ -48,7 +48,6 @@ class Response {
       return prev.then(curr)
     }, Promise.resolve())
       .then(function (result) {
-        console.log('RESULT is ', result)
       })
   }
 

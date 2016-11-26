@@ -1,6 +1,6 @@
 {
   "name": "ranka",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Facebook Messaging bot with greater expressivity",
   "main": "src/index.js",
   "scripts": {
