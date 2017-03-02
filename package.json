@@ -1,6 +1,6 @@
 {
   "name": "ranka",
-  "version": "0.1.6",
+  "version": "1.0.0",
   "description": "Facebook Messaging bot with greater expressivity",
   "main": "src/index.js",
   "scripts": {
@@ -20,12 +20,12 @@
   },
   "homepage": "https://github.com/kahwee/ranka#readme",
   "dependencies": {
-    "bluebird": "^3.4.6",
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "request": "^2.78.0"
+    "bluebird": "^3.4.7",
+    "body-parser": "^1.17.0",
+    "express": "^4.15.0",
+    "request": "^2.79.0"
   },
   "devDependencies": {
-    "standard": "^8.4.0"
+    "standard": "^9.0.0"
   }
 }
