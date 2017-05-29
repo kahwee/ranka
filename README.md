@@ -1,5 +1,7 @@
 # ranka
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kahwee/ranka.svg)](https://greenkeeper.io/)
+
 Facebook Messaging bot with greater expressivity to be used in conjunction with Express.
 
 ![Demo](https://github.com/kahwee/ranka/raw/master/demo.gif "Demo")
