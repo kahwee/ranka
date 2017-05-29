@@ -26,6 +26,6 @@
     "request": "^2.79.0"
   },
   "devDependencies": {
-    "standard": "^9.0.0"
+    "standard": "^10.0.2"
   }
 }
