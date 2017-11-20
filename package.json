@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
-    "node": "6.x"
+    "node": "8.x"
   },
   "repository": {
     "type": "git",
@@ -20,12 +20,12 @@
   },
   "homepage": "https://github.com/kahwee/ranka#readme",
   "dependencies": {
-    "bluebird": "^3.4.7",
-    "body-parser": "^1.17.0",
-    "express": "^4.15.0",
-    "request": "^2.79.0"
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "request": "^2.83.0"
   },
   "devDependencies": {
-    "standard": "^9.0.0"
+    "standard": "^10.0.3"
   }
 }
