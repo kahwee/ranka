@@ -1,5 +1,7 @@
 # ranka
 
+> **IMPORTANT: This project is no longer supported and has been archived. The Facebook Messenger API has undergone significant changes since this library was created, and it may not work with current API versions.**
+
 Facebook Messaging bot with greater expressivity to be used in conjunction with Express.
 
 ![Demo](https://github.com/kahwee/ranka/raw/master/demo.gif "Demo")
@@ -251,3 +253,7 @@ Using the above, you can send [Button Template](https://developers.facebook.com/
 ## License
 
 Apache 2.0 License
+
+## Project Status
+
+This project is archived and no longer maintained. It was developed for an older version of the Facebook Messenger API and is not compatible with recent API changes. Please consider using a more up-to-date Facebook Messenger bot framework for new projects.
