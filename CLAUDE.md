@@ -1,8 +1,8 @@
 # CLAUDE.md for Ranka
 
 ## Build/Dev Commands
-- Install: `npm install` or `yarn install` 
-- Lint: `npx standard` (project uses StandardJS)
+- Install: `npm install` (project uses npm only, not yarn)
+- Lint: `npm run lint` (project uses StandardJS)
 - Test: No tests currently configured
 
 ## Code Style Guidelines
@@ -13,7 +13,7 @@
 - **Error Handling**: Use Promise rejection with appropriate logging
 - **Design Pattern**: Chainable API methods that return `this` 
 - **Framework**: Express.js for routing
-- **Node Version**: Project targets Node 8.x
+- **Node Version**: Project targets Node 14.x
 
 ## Project Structure
 - `/src/index.js`: Main Ranka class definition
